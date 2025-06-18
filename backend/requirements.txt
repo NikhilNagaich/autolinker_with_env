@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+requests
+beautifulsoup4
+readability-lxml
+tqdm
+openai
+numpy
+scikit-learn
+python-dotenv
+tldextract
+supabase
+psycopg2-binary
+nltk

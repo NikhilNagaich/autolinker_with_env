@@ -1,0 +1,22 @@
+service:
+  name: my-fullstack-app-backend
+  type: web
+  env: python
+  plan: free
+  buildCommand: pip install -r requirements.txt
+  startCommand: uvicorn api.main:app --host 0.0.0.0 --port 8000
+  rootDirectory: backend
+  envVars:
+    SUPABASE_URL: ${SUPABASE_URL}
+    SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+    OPENAI_API_KEY: ${OPENAI_API_KEY}
+
+staticSite:
+  name: my-fullstack-app-frontend
+  type: static
+  plan: free
+  buildCommand: npm install && npm run build
+  publishDirectory: frontend/build
+  rootDirectory: frontend
+  envVars:
+    REACT_APP_API_URL: ${REACT_APP_API_URL}

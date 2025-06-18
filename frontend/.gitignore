@@ -1,0 +1,13 @@
+.env
+
+# Node modules and build output
+node_modules/
+build/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
