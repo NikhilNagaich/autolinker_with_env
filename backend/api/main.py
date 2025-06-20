@@ -79,4 +79,8 @@ async def results(job_id: str):
         return {"error": "Job not completed yet"}
     return job["results"]
 
+@router.get("/ping")
+def ping():
+    return {"status": "ok"}
+
 app.include_router(router)
