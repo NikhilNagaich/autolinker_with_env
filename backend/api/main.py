@@ -5,6 +5,7 @@ from typing import Dict, Any
 import uuid
 import sys
 import os
+import import_nltk
 
 # Ensure the root directory is in sys.path so pipeline.py can be imported
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
